@@ -5,7 +5,7 @@ import { styles } from "../styles/style";
 
 export default function AboutMe(): JSX.Element {
   return (
-    <div className="px-4 laptop:px-14 py-10 laptop:flex gap-8" id="about">
+    <div className="px-4 laptop:px-14 py-10 laptop:flex gap-8" id="about me">
       {/* image container */}
       <div>
         <Image src={imageMobile} alt="about-me" className="laptop:hidden" />

@@ -11,6 +11,8 @@
 :root {
   --background: #ffffff;
   --foreground: #000;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 @media (prefers-color-scheme: dark) {

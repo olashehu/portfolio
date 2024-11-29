@@ -78,3 +78,10 @@ export const experienceList = [
       occupation: "software engineer",
     },
   ];
+
+  export const navLinks = [
+    {id: 1, label: 'about me'},
+    {id: 2, label: 'skills'},
+    {id: 3, label: 'projects'},
+    {id: 4, label: 'contact me'},
+  ];

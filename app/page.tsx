@@ -11,8 +11,9 @@ import Testimonial from "./ui/Testimonial";
 export default function Home() {
   return (
     <>
-      <div className="max-w-[1440px] mx-auto">
+      <div className="w-full max-w-[1440px] mx-auto">
         <Header />
+        {/* <MobileLink /> */}
         <Herosection />
         <Skills />
         <Experience />

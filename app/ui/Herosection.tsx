@@ -8,10 +8,13 @@ import Linkedin from "../icons/Linkedin";
 import { styles } from "../styles/style";
 
 const Herosection = () => {
+  const name = "shehu abdulkadir.";
+  // max-w-[343px] tablet:max-w-[549px]
+  // px-4 laptop:px-14 py-10 h-full w-full
   return (
-    <div className="laptop:flex gap-8 px-4 laptop:px-14 py-10 h-full relative">
+    <div className={`${styles.containerStyle} laptop:flex`}>
       {/* hero images */}
-      <div className="order-1 place-self-end">
+      <div className="order-1 place-self-end laptop:w-[55%]">
         <Image src={heroImage} alt="hero-image" className="laptop:hidden" />
         <Image
           src={herobanner}
@@ -20,10 +23,10 @@ const Herosection = () => {
         />
       </div>
       {/* hero text */}
-      <div className="pt-10 w-full max-w-[343px] tablet:max-w-[480px]">
+      <div className="pt-10 laptop:pt-0 w-full laptop:w-[43%]">
         <div className={`${styles.headerStyles} font-normal`}>
           <p>
-            Hello I am <span className="font-extrabold capitalize">shehu abdulkadir.</span>
+            Hello I am <span className="font-extrabold capitalize">{name}</span>
           </p>
           <p>
             <span className="font-extrabold">Software</span>{" "}
