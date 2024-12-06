@@ -4,7 +4,7 @@ import { styles } from "../styles/style";
 
 export default function Experience() {
   return (
-    <div className="bg-black text-white py-10">
+    <div className="bg-black text-white py-10 laptop:py-12">
       <h1
         className={`${styles.headerStyles} text-center capitalize font-normal`}
       >
@@ -16,7 +16,7 @@ export default function Experience() {
           return (
             <div
               key={id}
-              className="px-4 laptop:px-14 pb-2 rounded-[10px] border-[#71717a] border-[1.5px] mx-3 mb-6 max-w-[1168px]"
+              className="px-4 laptop:px-20 pb-2 rounded-[10px] border-[#71717a] border-[1.5px] mx-3 mb-6 max-w-[1168px]"
             >
               <div className="pb-3 laptop:flex items-center justify-between font-semibold">
                 <div className="flex items-center gap-4 py-4">

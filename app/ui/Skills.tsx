@@ -4,7 +4,7 @@ import { styles } from "../styles/style";
 
 const Skills = () => {
   return (
-    <div className="px-4 laptop:px-14 py-10" id="skills">
+    <div className={`${styles.containerStyle}`} id="skills">
       <h2
         className={`${styles.headerStyles} text-center capitalize font-normal`}
       >
@@ -14,10 +14,10 @@ const Skills = () => {
         {skillsList.map((skills) => (
           <div
             key={skills.id}
-            className="flex flex-col items-center justify-center border rounded-[10px] w-[161px] h-[161px] laptop:w-[186px] laptop:h-[186px]"
+            className="flex flex-col items-center justify-center border rounded-[10px] w-[161px] h-[161px] laptop:w-[186px] laptop:h-[186px] hover:scale-110"
           >
             <Image src={skills.icon} alt={skills.label} />
-            <div className="font-bold text-xl capitalize py-2 leading-[1.2]">
+            <div className="font-bold text-xl capitalize pt-2 leading-[1.2]">
               {skills.label}
             </div>
           </div>
