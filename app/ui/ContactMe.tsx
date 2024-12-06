@@ -6,7 +6,7 @@ import { styles } from "../styles/style";
 const style = "max-w-[500px] border-black border-2 rounded-[4px] p-2 block";
 export default function Contactme(): JSX.Element {
   return (
-    <div className="px-4 laptop:px-14 py-10 laptop:flex gap-32" id="contact me">
+    <div className={`${styles.containerStyle} laptop:flex gap-32`} id="contact me">
       {/* form container */}
       <div>
         <form action="" className="flex flex-col gap-3">

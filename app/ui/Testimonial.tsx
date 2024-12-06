@@ -4,7 +4,7 @@ import { styles } from "../styles/style";
 
 export default function Testimonial(): JSX.Element {
   return (
-    <div className="px-4 laptop:px-14 py-10">
+    <div className={`${styles.containerStyle}`}>
       <h1 className={`${styles.headerStyles} text-center font-normal`}>
         my <span className="font-extrabold">testimonial</span>
       </h1>

@@ -1,7 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,20 +8,20 @@ import { navLinks } from "../lib/placeholder-data";
 import HeaderIcon from "../icons/HeaderIcon";
 import toggleIcon from "../../public/images/material-symbols_menu.svg";
 import downloadIcon from "../../public/images/download.svg";
+const pdfUrl = "http://localhost:3000/women.pdf";
 
 export default function Header(): JSX.Element {
   const [isToggled, setIsToggled] = useState<boolean>(false);
-  const containerRef = useRef<any>(null);
-  const linkRef = useRef<any>(null);
 
-  useEffect(() => {
-    const containerHeight = linkRef?.current.getBoundingClientRect().height;
-    if (isToggled) {
-      containerRef.current.style.height = `${containerHeight}px`;
-    } else {
-      containerRef.current.style.height = "0px";
-    }
-  }, [isToggled]);
+  const handleDownload = (url: string) => {
+    const fileName = url.split("/").pop();
+    const a = document.createElement("a");
+    a.href = url;
+    a.setAttribute("download", fileName as string);
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  };
 
   return (
     <nav className="p-4 laptop:py-6 laptop:px-20 bg-inherit capitalize">
@@ -45,17 +44,21 @@ export default function Header(): JSX.Element {
           >
             <Image src={toggleIcon} alt="toggle-icon" />
           </button>
-          <button className="bg-black hover:bg-[#404040] text-white p-2 hidden laptop:flex items-center gap-2 font-semibold rounded border-none outline-none text-base">
+          <button
+            onClick={() => handleDownload(pdfUrl)}
+            className="bg-black hover:bg-[#404040] text-white p-2 hidden laptop:flex items-center gap-2 font-semibold rounded border-none outline-none text-base"
+          >
             Resume
             <Image src={downloadIcon} alt="download-icon" />
           </button>
         </div>
       </div>
       <div
-        className="h-auto bg-inherit overflow-hidden laptop:hidden"
-        ref={containerRef}
+        className={`${
+          isToggled === true ? "h-[240px]" : "h-0"
+        } bg-inherit overflow-hidden laptop:hidden`}
       >
-        <div ref={linkRef} className="flex flex-col gap-4 py-3">
+        <div className="flex flex-col gap-4 py-3">
           {navLinks.map((link) => (
             <Link
               href={`#${link.label}`}
@@ -66,7 +69,10 @@ export default function Header(): JSX.Element {
               {link.label}
             </Link>
           ))}
-          <button className="bg-black hover:bg-[#404040] text-white p-2 flex items-center gap-2 font-semibold rounded border-none outline-none text-lg w-[120px]">
+          <button
+            onClick={() => handleDownload(pdfUrl)}
+            className="bg-black hover:bg-[#404040] text-white p-2 flex items-center gap-2 font-semibold rounded border-none outline-none text-lg w-[120px]"
+          >
             Resume
             <Image src={downloadIcon} alt="download-icon" />
           </button>
