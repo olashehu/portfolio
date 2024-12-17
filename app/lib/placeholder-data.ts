@@ -1,6 +1,7 @@
 import iconApple from "../../public/images/apple.svg";
-import iconGoogle from "../../public/images/google.svg";
+// import iconGoogle from "../../public/images/google.svg";
 import iconYoutube from "../../public/images/youtube.svg";
+import phixitLogo from "../../public/images/phixitlogo.svg";
 import iconExpress from "../../public/images/icon-express.svg";
 import iconGit from "../../public/images/icon-git.svg";
 import iconNest from "../../public/images/icon-nest.svg";
@@ -21,7 +22,8 @@ import blog from "../../public/images/blog.svg";
 export const experienceList = [
   {
     id: 1,
-    icon: iconGoogle,
+    // icon: iconGoogle,
+    icon: phixitLogo,
     company: "Lead Software Engineer at Google",
     text: "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
     date: "Nov 2019 - Present",

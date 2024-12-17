@@ -2,14 +2,15 @@ import FacebookIcon from "../icons/FacebookIcon";
 import TwitterIcon from "../icons/TwitterIcon";
 import Linkedin from "../icons/Linkedin";
 import { styles } from "../styles/style";
+// laptop:flex gap-32
 
 const style = "max-w-[500px] border-black border-2 rounded-[4px] p-2 block";
 export default function Contactme(): JSX.Element {
   return (
-    <div className={`${styles.containerStyle} laptop:flex gap-32`} id="contact me">
+    <div className={`${styles.containerStyle} flex flex-col laptop:flex-row items-center gap-2 laptop:gap-32`} id="contact me">
       {/* form container */}
       <div>
-        <form action="" className="flex flex-col gap-3">
+        <form action="" className="flex flex-col gap-4">
           <input placeholder="Your name" name="" className={`${style}`} />
           <input
             placeholder="Your email"
@@ -27,13 +28,19 @@ export default function Contactme(): JSX.Element {
             placeholder="How can i help?"
             className={`${style} h-[148px]`}
           ></textarea>
+          <button
+              type="submit"
+              className="capitalize max-w-[500px] bg-black text-white py-2 px-3 rounded border-none outline-none"
+            >
+              get in touch
+            </button>
           <div className="flex items-center gap-4">
-            <button
+            {/* <button
               type="submit"
               className="capitalize max-w-[173px] bg-black text-white py-2 px-3 rounded border-none outline-none"
             >
               get in touch
-            </button>
+            </button> */}
             <FacebookIcon />
             <TwitterIcon />
             <div className="border-2 border-black rounded w-[56px] h-[56px] flex items-center justify-center">

@@ -8,7 +8,7 @@ export default function Testimonial(): JSX.Element {
       <h1 className={`${styles.headerStyles} text-center font-normal`}>
         my <span className="font-extrabold">testimonial</span>
       </h1>
-      <div className="flex flex-wrap gap-8">
+      <div className="flex flex-wrap items-center justify-center gap-8">
         {testimonialList.map((data) => {
           const { id, image, text, name, occupation } = data;
           return (
