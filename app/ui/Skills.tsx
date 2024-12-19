@@ -10,7 +10,7 @@ const Skills = () => {
       >
         <span>my</span> <span className="font-extrabold">skills</span>
       </h2>
-      <div className="flex items-center flex-wrap gap-[20px] w-full max-w-[1216px]">
+      <div className="flex items-center justify-center flex-wrap gap-[20px] w-full max-w-[1216px]">
         {skillsList.map((skills) => (
           <div
             key={skills.id}

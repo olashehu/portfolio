@@ -1,6 +1,7 @@
-import iconApple from "../../public/images/apple.svg";
+// import iconApple from "../../public/images/apple.svg";
 import iconGoogle from "../../public/images/google.svg";
 import iconYoutube from "../../public/images/youtube.svg";
+import phixitLogo from "../../public/images/phixitlogo.svg";
 import iconExpress from "../../public/images/icon-express.svg";
 import iconGit from "../../public/images/icon-git.svg";
 import iconNest from "../../public/images/icon-nest.svg";
@@ -35,10 +36,12 @@ export const experienceList = [
   },
   {
     id: 3,
-    icon: iconApple,
-    company: "Software Engineer at Apple",
-    text: "During my tenure at Apple, I held the role of Software Architect, where I played a key role in shaping the architecture of mission-critical software projects. Responsible for designing scalable and efficient systems, I provided technical leadership to a cross-functional team.",
-    date: "Jan 2016 - Dec 2017",
+    icon: phixitLogo,
+    company: "Software Engineer at Phixit",
+    text: `Played a key role in redesigning Teamphixit’s website, converting designs into functional web 
+           applications using a comprehensive tech stack including HTML, React, NextJS, Material UI, and Redux
+          `,
+    date: "Jan 2018 - Dec 2019",
   },
 ];
 

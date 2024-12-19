@@ -16,13 +16,13 @@ export default function Projects(): JSX.Element {
         {projectsList.map((projects) => {
           const { id, pname, image, pdetail } = projects;
           return (
-            <div key={id} className="laptop:flex">
+            <div key={id} className="flex flex-col items-center laptop:items-start laptop:flex-row">
               <Image
                 src={image}
                 alt=""
                 className={`${id % 2 === 0 ? "order-1" : ""} rounded`}
               />
-              <div className="laptop:pt-14 font-extrabold text-2xl">
+              <div className="laptop:pt-14 font-extrabold text-2xl max-w-[500px]">
                 <div className="py-6">{id}</div>
                 <h1 className="text-xl capitalize">{pname}</h1>
                 <p className="pt-6 text-sm font-normal text-[#71717A]">

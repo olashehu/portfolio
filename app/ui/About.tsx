@@ -7,7 +7,7 @@ export default function AboutMe(): JSX.Element {
   return (
     <div className={`${styles.containerStyle} laptop:flex gap-8`} id="about me">
       {/* image container */}
-      <div>
+      <div className="flex items-center justify-center">
         <Image src={imageMobile} alt="about-me" className="laptop:hidden" />
         <Image
           src={imageDesktop}
@@ -15,8 +15,8 @@ export default function AboutMe(): JSX.Element {
           className="hidden laptop:flex"
         />
       </div>
-      <div className="max-w-[38.125rem]">
-        <h1 className={`${styles.headerStyles} laptop:pt-10 font-normal`}>
+      <div className="max-w-[38.125rem] mx-auto">
+        <h1 className={`${styles.headerStyles} laptop:pt-10 font-normal text-center`}>
           about <span className="font-extrabold">me</span>
         </h1>
         <div className="text-[#71717A] text-base flex flex-col gap-5 font-normal">
